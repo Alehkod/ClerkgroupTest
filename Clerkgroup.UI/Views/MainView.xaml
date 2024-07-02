@@ -1,0 +1,54 @@
+﻿<Window x:Class="Clerkgroup.UI.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Clerkgroup.UI.Views"
+        xmlns:authview="clr-namespace:Clerkgroup.AuthView;assembly=Clerkgroup.AuthView"
+        xmlns:view1="clr-namespace:Clerkgroup.View_1;assembly=Clerkgroup.View_1"
+        xmlns:vm1="clr-namespace:Clerkgroup.View_1.ViewModels;assembly=Clerkgroup.View_1"
+        xmlns:view2="clr-namespace:Clerkgroup.View_2;assembly=Clerkgroup.View_2"
+        xmlns:vm2="clr-namespace:Clerkgroup.View_2.ViewModels;assembly=Clerkgroup.View_2"
+        xmlns:navbar="clr-namespace:NavigationBar;assembly=NavigationBar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="580">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <navbar:NavigationBar Grid.Row="0" DataContext="{Binding NavigationBarViewModel}"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" 
+                    BorderBrush="Black"
+                    BorderThickness="4"  
+                    Margin="25,10,25,25">
+                <Border.Resources>
+                    <DataTemplate DataType="{x:Type vm1:ViewModel_1}">
+                        <view1:View_1/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type vm2:ViewModel_2}">
+                        <view2:View_2/>
+                    </DataTemplate>
+                </Border.Resources>
+
+                <ContentControl Content="{Binding CurrentViewModel}"/>
+            </Border>
+
+            <Border Grid.Column="1"
+                    BorderBrush="Black"
+                    BorderThickness="4"  
+                    Margin="0,10,25,25">
+                <authview:AuthView DataContext="{Binding AuthViewModel}" Grid.Column="1"/>
+
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

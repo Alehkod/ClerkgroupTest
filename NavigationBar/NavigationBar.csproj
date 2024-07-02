@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clerkgroup.Application\Clerkgroup.Application.csproj" />
+    <ProjectReference Include="..\Clerkgroup.Shared\Clerkgroup.Shared.csproj" />
+    <ProjectReference Include="..\Clerkgroup.View_1\Clerkgroup.View_1.csproj" />
+    <ProjectReference Include="..\Clerkgroup.View_2\Clerkgroup.View_2.csproj" />
+  </ItemGroup>
+
+</Project>
