@@ -1,11 +1,11 @@
 ﻿using Clerkgroup.Application;
 using Clerkgroup.AuthView;
+using Clerkgroup.NavigationBar;
 using Clerkgroup.UI.ViewModel;
 using Clerkgroup.UI.Views;
 using Clerkgroup.View_1;
 using Clerkgroup.View_2;
 using Microsoft.Extensions.DependencyInjection;
-using NavigationBar;
 using System.Configuration;
 using System.Data;
 using System.Windows;

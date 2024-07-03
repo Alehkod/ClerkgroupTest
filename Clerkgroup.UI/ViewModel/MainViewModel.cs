@@ -1,9 +1,9 @@
 ﻿using Clerkgroup.Application.Stores;
 using Clerkgroup.AuthView.ViewModels;
+using Clerkgroup.NavigationBar.ViewModels;
 using Clerkgroup.Shared;
 using Clerkgroup.View_1.ViewModels;
 using Clerkgroup.View_2.ViewModels;
-using NavigationBar.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

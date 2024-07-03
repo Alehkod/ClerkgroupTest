@@ -9,7 +9,7 @@
         xmlns:vm1="clr-namespace:Clerkgroup.View_1.ViewModels;assembly=Clerkgroup.View_1"
         xmlns:view2="clr-namespace:Clerkgroup.View_2;assembly=Clerkgroup.View_2"
         xmlns:vm2="clr-namespace:Clerkgroup.View_2.ViewModels;assembly=Clerkgroup.View_2"
-        xmlns:navbar="clr-namespace:NavigationBar;assembly=NavigationBar"
+        xmlns:navbar="clr-namespace:Clerkgroup.NavigationBar;assembly=Clerkgroup.NavigationBar"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="580">
     <Grid>

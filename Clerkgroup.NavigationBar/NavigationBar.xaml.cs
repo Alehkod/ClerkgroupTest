@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NavigationBar
+namespace Clerkgroup.NavigationBar
 {
     /// <summary>
     /// Interaction logic for UserControl1.xaml

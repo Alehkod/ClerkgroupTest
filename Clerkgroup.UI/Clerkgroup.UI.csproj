@@ -15,10 +15,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Clerkgroup.Application\Clerkgroup.Application.csproj" />
     <ProjectReference Include="..\Clerkgroup.AuthView\Clerkgroup.AuthView.csproj" />
+    <ProjectReference Include="..\Clerkgroup.NavigationBar\Clerkgroup.NavigationBar.csproj" />
     <ProjectReference Include="..\Clerkgroup.Shared\Clerkgroup.Shared.csproj" />
     <ProjectReference Include="..\Clerkgroup.View_1\Clerkgroup.View_1.csproj" />
     <ProjectReference Include="..\Clerkgroup.View_2\Clerkgroup.View_2.csproj" />
-    <ProjectReference Include="..\NavigationBar\NavigationBar.csproj" />
   </ItemGroup>
 
 </Project>

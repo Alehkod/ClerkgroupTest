@@ -1,15 +1,15 @@
-﻿using Clerkgroup.Application.Services;
+﻿using Clerkgroup.NavigationBar.Services;
+using Clerkgroup.NavigationBar.ViewModels;
 using Clerkgroup.View_1.ViewModels;
 using Clerkgroup.View_2.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
-using NavigationBar.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NavigationBar
+namespace Clerkgroup.NavigationBar
 {
     public static class DependencyInjection
     {
@@ -25,5 +25,5 @@ namespace NavigationBar
 
             return services;
         }
-    }
+    }    
 }

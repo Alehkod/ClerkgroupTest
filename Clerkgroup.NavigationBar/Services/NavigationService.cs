@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clerkgroup.Application.Services
+namespace Clerkgroup.NavigationBar.Services
 {
     public class NavigationService<TViewModel> where TViewModel : ViewModelBase
     {
