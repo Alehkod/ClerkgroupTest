@@ -26,7 +26,7 @@ namespace Clerkgroup.Shared.Commands
         {
             return !IsExecuting && base.CanExecute(parameter);
         }
-
+            
         public override async void Execute(object parameter)
         {
             IsExecuting = true;

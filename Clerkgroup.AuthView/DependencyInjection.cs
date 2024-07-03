@@ -1,4 +1,5 @@
 ﻿using Clerkgroup.AuthView.ViewModels;
+using Clerkgroup.RegisterView;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,8 @@ namespace Clerkgroup.AuthView
     {
         public static IServiceCollection AddAuthView(this  IServiceCollection services)
         {
+            services.AddRegisterView();
+
             services.AddSingleton<LoginViewModel>();
             services.AddSingleton<LogoutViewModel>();
 

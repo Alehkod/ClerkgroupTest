@@ -1,7 +1,8 @@
-﻿namespace Clerkgroup.Domain
+
+namespace Clerkgroup.RegisterWindow
 {
     public class Class1
     {
-
     }
+
 }

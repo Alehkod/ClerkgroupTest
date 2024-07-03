@@ -5,9 +5,9 @@ namespace Clerkgroup.Application.Services.ApiService
 {
     public interface IApiService
     {
-        Task RegisterAsync(User user);
-        Task LoginAsync(string login, string password);
-        Task LogoutAsync();
+        Task RegisterAsync(User user, CancellationToken cancellationToken);
+        Task LoginAsync(string username, string password, CancellationToken cancellationToken);
+        Task LogoutAsync(CancellationToken cancellationToken);
         Task<UserDto?> GetUserAsync(string username, CancellationToken cancellationToken);
     }
 }

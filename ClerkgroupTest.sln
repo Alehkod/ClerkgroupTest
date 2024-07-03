@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clerkgroup.NavigationBar", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clerkgroup.Domain", "Clerkgroup.Domain\Clerkgroup.Domain.csproj", "{D9A1B487-E871-48FF-B14E-8B25627A2B57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clerkgroup.RegisterView", "Clerkgroup.RegisterView\Clerkgroup.RegisterView.csproj", "{4854F3B9-07A0-447A-AEEC-E51E5282DE4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{D9A1B487-E871-48FF-B14E-8B25627A2B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9A1B487-E871-48FF-B14E-8B25627A2B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9A1B487-E871-48FF-B14E-8B25627A2B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4854F3B9-07A0-447A-AEEC-E51E5282DE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4854F3B9-07A0-447A-AEEC-E51E5282DE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4854F3B9-07A0-447A-AEEC-E51E5282DE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4854F3B9-07A0-447A-AEEC-E51E5282DE4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{26C43AAA-CA93-4A99-8AE3-5E97EF4F4D9C} = {FA041F45-C83C-442D-B462-D1688ADA1EF6}
 		{070A133C-2B2A-4C0A-A758-9AA3558FD439} = {26C43AAA-CA93-4A99-8AE3-5E97EF4F4D9C}
 		{D9A1B487-E871-48FF-B14E-8B25627A2B57} = {AD98D4AD-7879-4085-B836-4D2C7C043C13}
+		{4854F3B9-07A0-447A-AEEC-E51E5282DE4E} = {FA041F45-C83C-442D-B462-D1688ADA1EF6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B86EC8F6-A8DD-41D0-9852-3ECED49ED980}

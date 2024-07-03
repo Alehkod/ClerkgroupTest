@@ -45,12 +45,8 @@ namespace Clerkgroup.UI
             return services.BuildServiceProvider();
         }
 
-        protected override async void OnStartup(StartupEventArgs e)
+        protected override void OnStartup(StartupEventArgs e)
         {
-            var a = Services.GetRequiredService<IApiService>();
-            await a.GetUserAsync("test1", default);
-
-
             MainWindow = Services.GetRequiredService<MainView>();
 
             MainWindow.Show();

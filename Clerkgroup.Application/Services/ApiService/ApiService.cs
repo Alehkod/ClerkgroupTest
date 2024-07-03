@@ -1,12 +1,7 @@
 ﻿using Clerkgroup.Application.Dto;
 using Clerkgroup.Application.Stores;
 using Clerkgroup.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http.Json;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Clerkgroup.Application.Services.ApiService
 {
@@ -27,8 +22,6 @@ namespace Clerkgroup.Application.Services.ApiService
 
         public async Task<UserDto?> GetUserAsync(string username, CancellationToken cancellationToken)
         {
-            //using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, @$"https://petstore.swagger.io/v2/user/{username}");            
-
             try
             {
                 UserDto? user;
@@ -42,24 +35,31 @@ namespace Clerkgroup.Application.Services.ApiService
             }      
         }
 
-        public Task LoginAsync(string login, string password)
+        public async Task LoginAsync(string username, string password, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var response = await _httpClient.GetAsync($@"https://petstore.swagger.io/v2/user/login?username={username}&password={password}", cancellationToken);
+
+            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                return;
+
+            var user = await GetUserAsync(username, cancellationToken);
+
+            _userStore.CurrentUser = user;
         }
 
-        public Task LogoutAsync()
+        public async Task LogoutAsync(CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await _httpClient.GetAsync(@"https://petstore.swagger.io/v2/user/logout");
         }
 
-        public Task RegisterAsync()
+        public async Task RegisterAsync(User user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
-        }
+            var response = await _httpClient.PostAsJsonAsync<User>(@"https://petstore.swagger.io/v2/user", user, cancellationToken);
 
-        public Task RegisterAsync(User user)
-        {
-            throw new NotImplementedException();
+            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+                return;
+
+            await LoginAsync(user.Username, user.Password, cancellationToken);
         }
     }
 }

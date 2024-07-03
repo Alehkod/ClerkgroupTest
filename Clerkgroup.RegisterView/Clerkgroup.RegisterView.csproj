@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
@@ -8,13 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="PasswordBoxMVVM" Version="1.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Clerkgroup.Application\Clerkgroup.Application.csproj" />
-    <ProjectReference Include="..\Clerkgroup.RegisterView\Clerkgroup.RegisterView.csproj" />
     <ProjectReference Include="..\Clerkgroup.Shared\Clerkgroup.Shared.csproj" />
   </ItemGroup>
 

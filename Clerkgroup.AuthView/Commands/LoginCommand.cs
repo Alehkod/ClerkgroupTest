@@ -1,4 +1,5 @@
 ﻿using Clerkgroup.Application.Dto;
+using Clerkgroup.Application.Services.ApiService;
 using Clerkgroup.Application.Stores;
 using Clerkgroup.AuthView.ViewModels;
 using Clerkgroup.Shared.Commands;
@@ -10,25 +11,24 @@ using System.Threading.Tasks;
 
 namespace Clerkgroup.AuthView.Commands
 {
-    public class LoginCommand : CommandBase
+    public class LoginCommand : AsyncCommandBase
     {
         private readonly UserStore _userStore;
         private readonly LoginViewModel _loginViewModel;
+        private readonly IApiService _apiService;
 
-        public LoginCommand(UserStore userStore, LoginViewModel loginViewModel)
+        public LoginCommand(UserStore userStore, LoginViewModel loginViewModel, IApiService apiService)
         {
             _userStore = userStore;
             _loginViewModel = loginViewModel;
+            _apiService = apiService;
         }
 
-        public override void Execute(object? parameter)
+        public override async Task ExecuteAsync(object parameter)
         {
-            var user = new UserDto()
-            {
-                FirstName = _loginViewModel.Username
-            };
+            CancellationToken cancellationToken = new CancellationTokenSource().Token;
 
-            _userStore.CurrentUser = user;
+            await _apiService.LoginAsync(_loginViewModel.Username, _loginViewModel.Password, cancellationToken);
         }
     }
 }
