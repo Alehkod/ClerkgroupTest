@@ -1,26 +1,15 @@
 ﻿using Clerkgroup.NavigationBar.Services;
 using Clerkgroup.Shared;
 using Clerkgroup.Shared.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Clerkgroup.NavigationBar.Commands
+namespace Clerkgroup.NavigationBar.Commands;
+
+public class NavigateCommand<TViewModel>(NavigationService<TViewModel> navigationService) : CommandBase where TViewModel : ViewModelBase
 {
-    public class NavigateCommand<TViewModel> : CommandBase where TViewModel : ViewModelBase
+    private readonly NavigationService<TViewModel> _navigationService = navigationService;
+
+    public override void Execute(object? parameter)
     {
-        private readonly NavigationService<TViewModel> _navigationService;
-
-        public NavigateCommand(NavigationService<TViewModel> navigationService)
-        {
-            _navigationService = navigationService;
-        }
-
-        public override void Execute(object? parameter)
-        {
-            _navigationService.Navigate();
-        }
+        _navigationService.Navigate();
     }
 }

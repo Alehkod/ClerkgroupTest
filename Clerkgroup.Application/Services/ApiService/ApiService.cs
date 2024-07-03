@@ -49,7 +49,7 @@ namespace Clerkgroup.Application.Services.ApiService
 
         public async Task LogoutAsync(CancellationToken cancellationToken)
         {
-            await _httpClient.GetAsync(@"https://petstore.swagger.io/v2/user/logout");
+            await _httpClient.GetAsync(@"https://petstore.swagger.io/v2/user/logout", cancellationToken);
         }
 
         public async Task RegisterAsync(User user, CancellationToken cancellationToken)

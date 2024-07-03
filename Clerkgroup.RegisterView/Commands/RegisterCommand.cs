@@ -3,32 +3,23 @@ using Clerkgroup.Application.Stores;
 using Clerkgroup.Domain;
 using Clerkgroup.RegisterView.ViewModels;
 using Clerkgroup.Shared.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Input;
 
 namespace Clerkgroup.RegisterView.Commands
 {
-    public class RegisterCommand : AsyncCommandBase
+    public class RegisterCommand(IApiService apiService, RegisterViewModel registerViewModel) : AsyncCommandBase
     {
-        private readonly UserStore _userStore;
-        private readonly IApiService _apiService;
-        private readonly RegisterViewModel _registerViewModel;
-
-        public RegisterCommand(UserStore userStore, IApiService apiService, RegisterViewModel registerViewModel)
-        {
-            _userStore = userStore;
-            _apiService = apiService;
-            _registerViewModel = registerViewModel;
-        }
+        private readonly IApiService _apiService = apiService;
+        private readonly RegisterViewModel _registerViewModel = registerViewModel;
 
         public override async Task ExecuteAsync(object parameter)
         {
-            User user = new User
+            if (_registerViewModel.Username == null || _registerViewModel.Password == null)
+            {
+                return;
+            }
+
+            User user = new()
             {
                 Username = _registerViewModel.Username,
                 Password = _registerViewModel.Password,

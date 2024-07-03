@@ -2,13 +2,6 @@
 using Clerkgroup.AuthView.ViewModels;
 using Clerkgroup.NavigationBar.ViewModels;
 using Clerkgroup.Shared;
-using Clerkgroup.View_1.ViewModels;
-using Clerkgroup.View_2.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Clerkgroup.UI.ViewModel
 {
@@ -26,7 +19,7 @@ namespace Clerkgroup.UI.ViewModel
         }
 
         public AuthViewModel AuthViewModel { get; }
-        public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
+        public ViewModelBase? CurrentViewModel => _navigationStore.CurrentViewModel;
         public NavigationBarViewModel NavigationBarViewModel { get; }
 
         private void OnCurrentViewModelChanged()

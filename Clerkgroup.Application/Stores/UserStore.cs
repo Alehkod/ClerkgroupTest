@@ -1,19 +1,10 @@
 ﻿using Clerkgroup.Application.Dto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Clerkgroup.Application.Stores
 {
     public class UserStore
     {
         public UserDto? _currentUser;
-
-        public UserStore()
-        {
-        }
 
         public UserDto? CurrentUser
         {
@@ -25,7 +16,7 @@ namespace Clerkgroup.Application.Stores
             }
         }
 
-        public Action CurrentUserChanged;
+        public Action? CurrentUserChanged;
 
         public void Logout()
         {

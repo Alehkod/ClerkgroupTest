@@ -3,11 +3,6 @@ using Clerkgroup.NavigationBar.ViewModels;
 using Clerkgroup.View_1.ViewModels;
 using Clerkgroup.View_2.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Clerkgroup.NavigationBar
 {

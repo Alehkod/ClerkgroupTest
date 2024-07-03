@@ -12,21 +12,33 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition />
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
-            <TextBlock>Login:</TextBlock>
-            <TextBox Text="{Binding Username}"></TextBox>
+            <TextBlock FontSize="14">Login:</TextBlock>
+            <TextBox FontSize="14" Text="{Binding Username}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1">
-            <TextBlock>Password:</TextBlock>
+            <TextBlock FontSize="14">Password:</TextBlock>
             <components:BindablePasswordBox Password="{Binding Password}"/>
         </StackPanel>
 
-        <Button Grid.Row="2" Content="Login" Command="{Binding LoginCommand}"/>
-        <Button Grid.Row="3" Content="Login" Command="{Binding RegisterCommand}"/>
+        <Button Grid.Row="2"
+                Content="Login"
+                FontSize="16" 
+                Command="{Binding LoginCommand}"
+                VerticalAlignment="Top"
+                Width="100"
+                Margin="0,20,0,0"/>
+        <Button Grid.Row="3"
+                FontSize="16" 
+                Content="btn__RegView" 
+                Command="{Binding RegisterCommand}" 
+                VerticalAlignment="Bottom"
+                Width="100"
+                Margin="0,0,0,20"/>
     </Grid>
 </UserControl>
