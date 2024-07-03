@@ -1,4 +1,5 @@
-﻿using Clerkgroup.Application.Stores;
+﻿using Clerkgroup.Application.Services.ApiService;
+using Clerkgroup.Application.Stores;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Clerkgroup.Application
@@ -9,6 +10,8 @@ namespace Clerkgroup.Application
         {
             services.AddSingleton<NavigationStore>();
             services.AddSingleton<UserStore>();
+
+            services.AddScoped<IApiService, ApiService>();
 
             return services;
         }

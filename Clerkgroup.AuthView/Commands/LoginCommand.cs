@@ -25,7 +25,7 @@ namespace Clerkgroup.AuthView.Commands
         {
             var user = new UserDto()
             {
-                Name = _loginViewModel.Username
+                FirstName = _loginViewModel.Username
             };
 
             _userStore.CurrentUser = user;

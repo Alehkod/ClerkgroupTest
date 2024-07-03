@@ -18,6 +18,6 @@ namespace Clerkgroup.View_1.ViewModels
             _userStore = userStore;
         }
 
-        public string Text => _userStore.CurrentUser.Name;
+        public string Text => _userStore.CurrentUser.FirstName;
     }
 }

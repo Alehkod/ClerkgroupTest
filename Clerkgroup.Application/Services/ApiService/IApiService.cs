@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Clerkgroup.Application.Dto;
+using Clerkgroup.Domain;
 
 namespace Clerkgroup.Application.Services.ApiService
 {
     public interface IApiService
     {
-        Task RegisterAsync();
+        Task RegisterAsync(User user);
+        Task LoginAsync(string login, string password);
+        Task LogoutAsync();
+        Task<UserDto?> GetUserAsync(string username, CancellationToken cancellationToken);
     }
 }

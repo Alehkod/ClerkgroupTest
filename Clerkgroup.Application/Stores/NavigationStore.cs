@@ -15,7 +15,6 @@ namespace Clerkgroup.Application.Stores
             get => _currentViewModel;
             set
             {
-                //_currentViewModel?.Dispose();
                 _currentViewModel = value;
                 OnCurrentViewModelChanged();
             }

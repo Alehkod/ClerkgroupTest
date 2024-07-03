@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Clerkgroup.Application.Dto
+﻿namespace Clerkgroup.Domain
 {
-    public class UserDto
+    public class User
     {
+        public required string Username { get; set; }
+        public required string Password { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }

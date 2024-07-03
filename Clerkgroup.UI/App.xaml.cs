@@ -1,4 +1,5 @@
 ﻿using Clerkgroup.Application;
+using Clerkgroup.Application.Services.ApiService;
 using Clerkgroup.AuthView;
 using Clerkgroup.NavigationBar;
 using Clerkgroup.UI.ViewModel;
@@ -44,8 +45,11 @@ namespace Clerkgroup.UI
             return services.BuildServiceProvider();
         }
 
-        protected override void OnStartup(StartupEventArgs e)
+        protected override async void OnStartup(StartupEventArgs e)
         {
+            var a = Services.GetRequiredService<IApiService>();
+            await a.GetUserAsync("test1", default);
+
 
             MainWindow = Services.GetRequiredService<MainView>();
 
